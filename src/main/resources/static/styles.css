@@ -1,0 +1,162 @@
+/* Контейнер формы */
+#crateTaskDiv {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+#crateTaskLabel {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+/* Форма */
+#crateTask {
+    display: flex;
+    gap: 10px;
+}
+
+/* Текстовое поле */
+#crateTask input[type="text"] {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+#crateTask input[type="text"]:focus {
+    outline: none;
+    border-color: #4e73df;
+    box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.25);
+}
+
+#crateTask input[type="text"]::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+/* Выпадающий список */
+#crateTask select {
+    width: 150px;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #495057;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#crateTask select:focus {
+    outline: none;
+    border-color: #4e73df;
+    box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.25);
+}
+
+/* Опции в выпадающем списке */
+#crateTask select option {
+    padding: 8px;
+    background: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+    #crateTask {
+        flex-direction: column;
+    }
+
+    #crateTask select {
+        width: 100%;
+    }
+}
+.alert-danger {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.alert-danger ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.alert-danger li {
+    list-style-type: disc;
+}
+
+.is-invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+}
+/* Стили для поля ввода */
+.description-form .form-control[disabled] {
+    background-color: #f8f9fa;
+    cursor: default;
+}
+
+.description-form .form-control:not([disabled]) {
+    background-color: white;
+    cursor: text;
+}
+
+/* Стили для кнопок */
+.description-form .btn-outline-secondary,
+.description-form .btn-outline-success {
+    padding: 0.375rem 0.75rem;
+}
+
+/* Подсветка невалидного поля */
+.description-form .is-invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.description-form .invalid-feedback {
+    display: block;
+    color: #dc3545;
+    font-size: 0.875em;
+}
+.description-form .form-control[disabled] {
+    background-color: #f8f9fa;
+    cursor: default;
+    border-color: transparent;
+}
+
+.description-form .form-control:not([disabled]) {
+    background-color: white;
+    cursor: text;
+    border-color: #ced4da;
+}
+
+.description-form .btn-outline-secondary,
+.description

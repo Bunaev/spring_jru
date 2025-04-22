@@ -1,0 +1,225 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Bunaev
+      comment: create table Task
+      changes:
+        - createTable:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: description
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: INT
+                  constraints:
+                    nullable: false
+            # Настройки таблицы (эквивалент ENGINE и CHARSET)
+            tableProps:
+              engine: InnoDB
+              defaultCharset: utf8mb4
+              autoIncrement: 16
+
+  - changeSet:
+      id: 2
+      author: Bunaev
+      comment: Начальное заполнение таблицы задач
+      changes:
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: description
+                  value: "aaa"
+              - column:
+                  name: status
+                  value: 1
+
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: description
+                  value: "bbb"
+              - column:
+                  name: status
+                  value: 2
+
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: description
+                  value: "ccc"
+              - column:
+                  name: status
+                  value: 0
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: description
+                  value: "ddd"
+              - column:
+                  name: status
+                  value: 1
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: description
+                  value: "eee"
+              - column:
+                  name: status
+                  value: 2
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: description
+                  value: "fff"
+              - column:
+                  name: status
+                  value: 0
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: description
+                  value: "ggg"
+              - column:
+                  name: status
+                  value: 1
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 8
+              - column:
+                  name: description
+                  value: "hhh"
+              - column:
+                  name: status
+                  value: 2
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 9
+              - column:
+                  name: description
+                  value: "jjj"
+              - column:
+                  name: status
+                  value: 0
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 10
+              - column:
+                  name: description
+                  value: "kkk"
+              - column:
+                  name: status
+                  value: 1
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 11
+              - column:
+                  name: description
+                  value: "lll"
+              - column:
+                  name: status
+                  value: 2
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 12
+              - column:
+                  name: description
+                  value: "mmm"
+              - column:
+                  name: status
+                  value: 0
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 13
+              - column:
+                  name: description
+                  value: "nnn"
+              - column:
+                  name: status
+                  value: 1
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 14
+              - column:
+                  name: description
+                  value: "ooo"
+              - column:
+                  name: status
+                  value: 2
+        - insert:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  value: 15
+              - column:
+                  name: description
+                  value: "ppp"
+              - column:
+                  name: status
+                  value: 0
+
+
+      rollback:
+        - delete:
+            tableName: task
+            where: "id BETWEEN 1 AND 15"
