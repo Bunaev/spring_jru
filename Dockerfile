@@ -10,6 +10,8 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
+COPY wait-for.sh /wait-for.sh
+RUN chmod +x /wait-for.sh
 COPY src/main/resources/db ./liquibase/
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]

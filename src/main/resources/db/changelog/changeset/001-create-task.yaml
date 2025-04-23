@@ -9,7 +9,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: INT
+                  type: BIGINT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
@@ -21,7 +21,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: status
-                  type: INT
+                  type: VARCHAR(50)
                   constraints:
                     nullable: false
             # Настройки таблицы (эквивалент ENGINE и CHARSET)
@@ -46,7 +46,7 @@ databaseChangeLog:
                   value: "aaa"
               - column:
                   name: status
-                  value: 1
+                  value: "DONE"
 
         - insert:
             tableName: task
@@ -59,7 +59,7 @@ databaseChangeLog:
                   value: "bbb"
               - column:
                   name: status
-                  value: 2
+                  value: "PAUSED"
 
         - insert:
             tableName: task
@@ -72,7 +72,7 @@ databaseChangeLog:
                   value: "ccc"
               - column:
                   name: status
-                  value: 0
+                  value: "IN_PROGRESS"
         - insert:
             tableName: task
             columns:
@@ -84,7 +84,7 @@ databaseChangeLog:
                   value: "ddd"
               - column:
                   name: status
-                  value: 1
+                  value: "DONE"
         - insert:
             tableName: task
             columns:
@@ -96,7 +96,7 @@ databaseChangeLog:
                   value: "eee"
               - column:
                   name: status
-                  value: 2
+                  value: "PAUSED"
         - insert:
             tableName: task
             columns:
@@ -108,7 +108,7 @@ databaseChangeLog:
                   value: "fff"
               - column:
                   name: status
-                  value: 0
+                  value: "IN_PROGRESS"
         - insert:
             tableName: task
             columns:
@@ -120,7 +120,7 @@ databaseChangeLog:
                   value: "ggg"
               - column:
                   name: status
-                  value: 1
+                  value: "DONE"
         - insert:
             tableName: task
             columns:
@@ -132,7 +132,7 @@ databaseChangeLog:
                   value: "hhh"
               - column:
                   name: status
-                  value: 2
+                  value: "PAUSED"
         - insert:
             tableName: task
             columns:
@@ -144,7 +144,7 @@ databaseChangeLog:
                   value: "jjj"
               - column:
                   name: status
-                  value: 0
+                  value: "IN_PROGRESS"
         - insert:
             tableName: task
             columns:
@@ -156,7 +156,7 @@ databaseChangeLog:
                   value: "kkk"
               - column:
                   name: status
-                  value: 1
+                  value: "DONE"
         - insert:
             tableName: task
             columns:
@@ -168,7 +168,7 @@ databaseChangeLog:
                   value: "lll"
               - column:
                   name: status
-                  value: 2
+                  value: "PAUSED"
         - insert:
             tableName: task
             columns:
@@ -180,7 +180,7 @@ databaseChangeLog:
                   value: "mmm"
               - column:
                   name: status
-                  value: 0
+                  value: "IN_PROGRESS"
         - insert:
             tableName: task
             columns:
@@ -192,7 +192,7 @@ databaseChangeLog:
                   value: "nnn"
               - column:
                   name: status
-                  value: 1
+                  value: "DONE"
         - insert:
             tableName: task
             columns:
@@ -204,7 +204,7 @@ databaseChangeLog:
                   value: "ooo"
               - column:
                   name: status
-                  value: 2
+                  value: "PAUSED"
         - insert:
             tableName: task
             columns:
@@ -216,7 +216,7 @@ databaseChangeLog:
                   value: "ppp"
               - column:
                   name: status
-                  value: 0
+                  value: "IN_PROGRESS"
 
 
       rollback:

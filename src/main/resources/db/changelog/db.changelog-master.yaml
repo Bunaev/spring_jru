@@ -1,5 +1,4 @@
 databaseChangeLog:
   - includeAll:
-      path: db/changelog/changeset  # Путь относительно resources
+      path: changeset  # Путь относительно resources
       relativeToChangelogFile: true
-      filter: ".*\\.yaml"
